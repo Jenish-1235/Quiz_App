@@ -1,21 +1,21 @@
-// lib/models/badge.dart
+// lib/models/badges.dart
 import 'package:json_annotation/json_annotation.dart';
 
 part 'badge.g.dart';
 
 @JsonSerializable()
-class Badge {
+class Badges {
   final String name;
   final String description;
   final String imageUrl;
 
-  Badge({
+  Badges({
     required this.name,
     required this.description,
     required this.imageUrl,
   });
 
-  factory Badge.fromJson(Map<String, dynamic> json) =>
+  factory Badges.fromJson(Map<String, dynamic> json) =>
       _$BadgeFromJson(json);
 
   Map<String, dynamic> toJson() => _$BadgeToJson(this);

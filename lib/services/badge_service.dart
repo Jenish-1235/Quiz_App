@@ -1,19 +1,19 @@
 // lib/services/badge_service.dart
-import '../models/badge.dart';
+import '../models/badges.dart';
 
 class BadgeService {
-  final List<Badge> availableBadges = [
-    Badge(
+  final List<Badges> availableBadges = [
+    Badges(
       name: 'Beginner',
       description: 'Complete your first quiz.',
       imageUrl: 'assets/images/badges/beginner.png',
     ),
-    Badge(
+    Badges(
       name: 'Intermediate',
       description: 'Score over 70% in a quiz.',
       imageUrl: 'assets/images/badges/advanced.png',
     ),
-    Badge(
+    Badges(
       name: 'Expert',
       description: 'Score over 90% in a quiz.',
       imageUrl: 'assets/images/badges/expert.png',
@@ -21,9 +21,9 @@ class BadgeService {
     // Add more badges as needed
   ];
 
-  List<Badge> evaluateBadges(int score, int total) {
+  List<Badges> evaluateBadges(int score, int total) {
     double percentage = (score / total) * 100;
-    List<Badge> earned = [];
+    List<Badges> earned = [];
 
     if (percentage >= 70) {
       earned.add(availableBadges[1]); // Intermediate

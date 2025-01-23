@@ -1,7 +1,7 @@
 // lib/models/user.dart
 import 'package:json_annotation/json_annotation.dart';
 
-import 'badge.dart';
+import 'badges.dart';
 
 part 'user.g.dart';
 
@@ -10,7 +10,7 @@ class User {
   final String username;
   final String avatarUrl;
   final int totalScore;
-  final List<Badge> earnedBadges;
+  final List<Badges> earnedBadges;
 
   User({
     required this.username,

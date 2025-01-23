@@ -2,7 +2,7 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/user.dart';
-import '../models/badge.dart';
+import '../models/badges.dart';
 
 class StorageService {
   static const String userKey = 'user_data';

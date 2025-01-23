@@ -31,14 +31,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // Animated Background
-          Positioned.fill(
-            child: Lottie.asset(
-              'assets/animations/home_bg.json',
-              fit: BoxFit.cover,
-              repeat: true,
+        Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/backgrounds/home_background.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
+            ),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -50,9 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       CircleAvatar(
                         radius: 30,
-                        backgroundImage: userProvider.user?.avatarUrl != null
-                            ? NetworkImage(userProvider.user!.avatarUrl)
-                            : AssetImage('assets/images/avatars/avatar1.png')
+                        backgroundImage: AssetImage('assets/images/avatars/avatar1.png')
                         as ImageProvider,
                       ),
                       SizedBox(width: 10),
@@ -158,9 +156,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-          ),
-        ],
-      ),
+          )
+        ]
+      )
     );
   }
 }

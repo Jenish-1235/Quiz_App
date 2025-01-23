@@ -31,7 +31,7 @@ class QuizApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: Colors.white,
         ),
-        // home: HomeScreen(),
+        home: HomeScreen(),
       ),
     );
   }

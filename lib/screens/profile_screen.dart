@@ -40,9 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               },
               child: CircleAvatar(
                 radius: 60,
-                backgroundImage: _avatarUrl != null
-                    ? NetworkImage(_avatarUrl!)
-                    : AssetImage('assets/images/avatars/avatar1.png')
+                backgroundImage: AssetImage('assets/images/avatars/avatar1.png')
                 as ImageProvider,
               ),
             ),
@@ -65,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 if (newUsername.isNotEmpty) {
                   User updatedUser = User(
                     username: newUsername,
-                    avatarUrl: _avatarUrl ?? 'assets/images/avatars/avatar1.png',
+                    avatarUrl: _avatarUrl ?? 'assets/images/avatars/avatar2.png',
                     totalScore: userProvider.user?.totalScore ?? 0,
                     earnedBadges: userProvider.user?.earnedBadges ?? [],
                   );

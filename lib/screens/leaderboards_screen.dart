@@ -35,13 +35,13 @@ class LeaderboardsScreen extends StatelessWidget {
       body: Stack(
         children: [
           // Background Animation
-          Positioned.fill(
-            child: Lottie.asset(
-              'assets/animations/leaderboard_bg.json',
-              fit: BoxFit.cover,
-              repeat: true,
-            ),
-          ),
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/backgrounds/home_background.jpg'),
+                fit: BoxFit.cover,
+              ),
+          )),
           SafeArea(
             child: Column(
               children: [
@@ -75,7 +75,7 @@ class LeaderboardsScreen extends StatelessWidget {
                 if (currentUser != null)
                   ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage(currentUser.avatarUrl),
+                      backgroundImage: AssetImage('assets/images/avatars/avatar1.png'),
                     ),
                     title: Text(currentUser.username),
                     trailing: Text(
